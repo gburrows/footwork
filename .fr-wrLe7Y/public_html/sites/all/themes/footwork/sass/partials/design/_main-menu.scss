@@ -1,0 +1,55 @@
+#block-system-main-menu {
+  //@include grid-span(10, 1);
+  border-top: 1px $color-light solid;
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    line-height: 14px;
+    @extend .clearfix;
+  }
+  a {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: $color-light;
+  }
+  li {
+    width: auto;
+    cursor: pointer;
+    float: left;
+    display: block;
+    padding: 8px;
+    @include transition(all 0.4s ease);
+    &:hover {
+      background: $color-mid;
+    }
+    &.active-first {
+      background: $color-light;
+      a {
+        color: $color-dark;
+      }
+    }
+    &.active-trail {
+      background: $color-light;
+      a {
+        color: $color-dark;
+      }
+    }
+  }
+  .social {
+    @include grid-span(5, 12);
+    li {
+      width: 15px;
+      height: 15px;
+      margin: 8px 0 8px 10px;
+      background: $color-light;
+      float: right;
+      list-style: none;
+      cursor: pointer;
+      @include transition(all 0.4s ease);
+      &:hover {
+        background: $color-dark;
+      }
+    }
+  }
+}

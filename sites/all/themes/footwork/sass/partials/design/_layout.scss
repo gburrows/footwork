@@ -1,0 +1,126 @@
+body {
+  padding: 0px;
+  @include respond-to(m) {
+    padding: 0 10px;
+  }
+}
+
+#main {
+  max-width: $page-width;
+  min-height: 600px;
+  margin: -30px auto 0 auto;
+  padding: 10px 10px 0 10px;
+  background: $color-light;
+  top: -1px;
+}
+
+#footer {
+  max-width: $page-width;
+  background: $color-light;
+  margin: 0 auto 20px auto;
+  padding: 10px 10px 2px 10px;
+  .content {
+    display: hidden; // Hide body?
+  }
+}
+
+.footer-logo {
+  width: 15%;
+  vertical-align: text-bottom;
+}
+
+footer p {
+  font-size: 10px;
+  margin: 0px;
+  padding-bottom: -5px;
+  a, span {
+    margin-left: 30px;
+  }
+}
+
+#main-prefix {
+  margin: -10px -10px 10px -10px;
+}
+
+#content-left {
+  @include respond-to(l) {
+    @include grid-span(12.2, 1);
+  }
+}
+
+.flyer-image-gallery {
+  border: 3px;
+} // playing around with borders, no luck
+
+.field-name-flyer-image {
+  border: 3px;
+}
+
+.fwb {
+  color: red;
+} //trying to change font colour of fb like box
+
+#content-right {
+  clear: both;
+  @include respond-to(l) {
+    float: right;
+    clear: none;
+  }
+  @include respond-to(l) {
+    @include grid-span(4, 13);
+  }
+}
+
+#block-fb-likebox-0, #block-block-3 {
+  margin-left: 4px;
+}
+
+#fb-root {
+    display: none;
+}
+
+/* To fill the container and nothing else */
+
+iframe, iframe span, iframe span iframe[style] {
+    width: 100% !important;
+}
+
+#header, #main, nav {
+  @extend %clearfix;
+}
+
+#header {
+  position: relative;
+  z-index: 1;
+  // margin: 0 -10px;
+}
+
+#header-inner {
+  max-width: $page-width;
+  margin: 0 auto;
+}
+
+nav {
+  border-top: 1px $color-light dotted;
+}
+
+.logo-wrapper {
+  display: block;
+  padding: 10px 0;
+  @extend %clearfix;
+  @include respond-to(m){
+    width: 330px;
+  }
+  @include respond-to(l) {
+    width: 45%;
+    .logo {
+      display: block;
+      width: 100%;
+      //margin-bottom: 6px;
+    }
+    .forward-thinking {
+      display: block;
+    }
+  }
+}
+
